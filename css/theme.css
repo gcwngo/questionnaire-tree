@@ -1,0 +1,40 @@
+body {
+	font-family: Arial;
+}
+.qt-question {
+	color: #555;
+	border: 1px solid #ccc;
+	background: #efefef;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.qt-question.qt-active {
+	display: inline-block;
+}
+
+.qt-question.qt-inactive {
+	display: none;
+}
+
+.qt-option {
+	cursor: pointer;
+	color: #fff;
+	background: #fff;
+	padding: 3px 6px;
+	margin: 0 0 0 10px;
+	border: 1px solid #fff;
+
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin: 5px 0;
+}
+
+.qt-option:hover {
+	box-shadow: 0 0 3px 1px #999;
+}
+
+#answer-result {
+	padding: 10px;
+}
