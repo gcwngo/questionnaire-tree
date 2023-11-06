@@ -4,36 +4,77 @@
 <title>questionnaireTree Demo</title>
 <link rel="stylesheet" type="text/css" href="../css/theme.css">
 <link rel="stylesheet" type="text/css" href="../css/colors.css">
-<script type="module" src="app.js"></script>
+<!-- <script type="module" src="app.js"></script> -->
 <script type="text/javascript">
 
 // async function loadQuestions() {
-// 	const response = await fetch('./questions.json');
-// 	const questions = await JSON.stringify(response);
-// 	return questions;
-// 	//console.log(questions);
+// 	const response = await fetch('https://raw.githubusercontent.com/gcwngo/questionnaire-tree/main/demo/questions.json');
+// 	const questions = await response.json();
+// 	document.addEventListener("DOMContentLoaded", function() {
+// 		questionnaireTree(loadQuestions(questions));
+// 	}, false);
 // }
-
+// var fq;
+// async function loadQuestions() {
+// 	const response = await fetch('https://raw.githubusercontent.com/gcwngo/questionnaire-tree/main/demo/questions.json', {
+// 		method: 'GET',
+// 		headers: {
+// 			'Accept': 'application/json'
+// 		}
+// 	});
+// 	const questions = await response.json();
+// 	console.log(questions);
+// }
 // loadQuestions();
-// var fq_colors = loadQuestions();
+// console.log(fq);
 
-// var fq_colors;
-// fetch('./questions.json')
-//     .then((response) => response.json())
-//     .then((data) => fq_colors = data);
+
+// Define the function that will fetch and process the questions.
+async function loadQuestions() {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/gcwngo/questionnaire-tree/main/demo/questions.json', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const questions = await response.json();
+        console.log(questions);
+        return questions; // Return the questions so they can be used after the fetch completes.
+    } catch (error) {
+        console.error("Could not load questions", error);
+        return null; // Return null or handle the error as you see fit.
+    }
+}
+
+// Add an event listener for the DOMContentLoaded event.
+document.addEventListener("DOMContentLoaded", function() {
+    // Call loadQuestions and then pass the data to questionnaireTree.
+    loadQuestions().then(questions => {
+        if (questions) {
+            questionnaireTree(questions); // Pass the questions JSON data directly to questionnaireTree.
+        }
+    });
+}, false);
+
+
+
 
 </script>
 
 <script type="text/javascript">
 	// document.addEventListener("DOMContentLoaded", function() {
-	// 	questionnaireTree(data);
+	// 	questionnaireTree(questions);
 	// }, false);
 </script>
-<script type="text/javascript" src="../js/questionnaireTree.js"></script>
+<script type="text/javascript" src="../js/questionnaireTree.min.js"></script>
 
 </head>
 <body>
 	<h3>questionnaireTree JS Demo: Color Selection</h3>
-	<div id="flowquest_container"></div>
+	<div id="qtree_container"></div>
 </body>
 </html>

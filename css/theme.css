@@ -2,11 +2,10 @@ body {
 	font-family: Arial;
 }
 .qt-question {
-	color: #555;
-	border: 1px solid #ccc;
-	background: #efefef;
-	padding: 10px;
-	margin: 10px 0;
+  padding: 1.5rem 2.5rem;
+  background-color: #56a5eb;
+  color: white;
+  width: 500px;
 }
 
 .qt-question.qt-active {
@@ -18,12 +17,13 @@ body {
 }
 
 .qt-option {
-	cursor: pointer;
-	color: #fff;
-	background: #fff;
-	padding: 3px 6px;
-	margin: 0 0 0 10px;
-	border: 1px solid #fff;
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 10rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+  background-color: white;
+  color: #56a5eb;
 
 	display: block;
 	height: 30px;
@@ -32,9 +32,38 @@ body {
 }
 
 .qt-option:hover {
-	box-shadow: 0 0 3px 1px #999;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
 }
 
 #answer-result {
 	padding: 10px;
 }
+
+  /* BUTTONS */
+  .button {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    width: 5rem;
+    text-align: center;
+    border: 0.1rem solid #56a5eb;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #56a5eb;
+    background-color: white;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  
+  .button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }

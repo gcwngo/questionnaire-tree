@@ -1,8 +1,7 @@
 
 /*
 	Colors Demo Stylesheet
-	by Arthur Khachatryan
-
+	
 	This stylesheet is for customizing the styling for various questions, options, and answers specific to the colors demo. It is meant to demonstrate the flexibility of working with Flowquest to create a custom flowchart questionarire. Simply pass in your classes in the configuration file you use when instantiating Flowquest...
 
 	"questions": {

@@ -1,5 +1,5 @@
 /**
- *  questionnaireTree: a flowchart questionaire utility that allows you to create any questionaire you want by feeding in your own data. The only requirement is that the data object needs to conform to the specific pattern expected.
+ *  questionnaireTree: a flowchart questionnaire and survey tool for creating questions from structured JSON data objects in a specified pattern.
  */
 var questionnaireTree = function(qt) {
     /**
