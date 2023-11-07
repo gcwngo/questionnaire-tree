@@ -1,0 +1,107 @@
+{
+    "containerID": "qtree_container",
+    "questions": {
+        "1": {
+            "question": "Is this a brand-new site or application/tool?",
+            "options": {
+                "yes": {
+                    "label": "Yes",
+                    "val": "Yes: brand-new site or application/tool",
+                    "classes": "",
+                    "nextQ": 2
+                },
+                "no": {
+                    "label": "No",
+                    "val": "No: brand-new site or application/tool",
+                    "classes": "",
+                    "nextQ": 3
+                }
+            }
+        },
+        "2": {
+            "question": "Is this site/application public facing?",
+            "options": {
+                "yes": {
+                    "label": "Yes",
+                    "val": "Yes: site/application public facing",
+                    "classes": "",
+                    "nextQ": 4
+                },
+                "no": {
+                    "label": "No",
+                    "val": "No: site/application public facing",
+                    "classes": "",
+                    "nextQ": 3
+                }
+            }
+        },
+        "3": {
+            "question": "Is this a redesign or large overhaul of an existing EERE site?",
+            "options": {
+                "yes": {
+                    "label": "Yes",
+                    "val": "Yes: a redesign or large overhaul of an existing EERE site",
+                    "classes": "",
+                    "nextQ": 2
+                },
+                "no": {
+                    "label": "No",
+                    "val": "No: a redesign or large overhaul of an existing EERE site",
+                    "classes": "",
+                    "nextQ": 5
+                }
+            }
+        },
+        "4": {
+            "question": "Is this new site or application for an EERE office or area?",
+            "options": {
+                "yes": {
+                    "label": "Yes",
+                    "val": "Yes: new site or application for an EERE office or area",
+                    "classes": "",
+                    "nextQ": null
+                },
+                "no": {
+                    "label": "No",
+                    "val": "No: new site or application for an EERE office or area",
+                    "classes": "",
+                    "nextQ": 6
+                }
+            }
+        },
+        "5": {
+            "question": "Is this an update to the existing site, such as a few new pages or edits to existing pages?",
+            "options": {
+                "yes": {
+                    "label": "Yes",
+                    "val": "Yes: update to the existing site, such as a few new pages or edits to existing pages",
+                    "classes": "yellow-bus",
+                    "nextQ": null
+                },
+                "no": {
+                    "label": "No",
+                    "val": "No: update to the existing site, such as a few new pages or edits to existing pages",
+                    "classes": "",
+                    "nextQ": 7
+                }
+            }
+        }
+    },
+    "answers": {
+        "patterns": {
+            "Yes: brand-new site or application/tool|Yes: site/application public facing|Yes: new site or application for an EERE office or area|": {
+                "position": "WGT Review",
+                "content": "Required"
+            },
+            "red|red-folly|": {
+                "position": "Folly Red",
+                "content": "Your favorite color is Folly Red."
+            },
+            "yellow|yellow-pantone|": {
+                "position": "Pantone Yellow",
+                "content": "Your favorite color is Pantone Yellow.",
+                "classes": "yellow-pantone"
+            }
+        }
+    }
+}
