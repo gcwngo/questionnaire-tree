@@ -260,7 +260,7 @@
     },
     "answers": {
         "patterns": {
-            "Yes: new site or application for an EERE office or area": {
+            "Yes: brand-new site or application/tool|Yes: site/application public facing|Yes: new site or application for an EERE office or area|": {
                 "position": "WGT Review",
                 "content": "Required"
             },
