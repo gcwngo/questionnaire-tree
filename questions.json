@@ -260,7 +260,7 @@
     },
     "answers": {
         "patterns": {
-            "Yes: new site or application for an EERE office or area|": {
+            "Yes: new site or application for an EERE office or area": {
                 "position": "WGT Review",
                 "content": "Required"
             },
@@ -295,15 +295,6 @@
             "Yes: a request for a new nested group in the Energy.gov CMS, or any other request not mentioned": {
                 "position": "WGT Review",
                 "content": "Required"
-            },
-            "red|red-folly|": {
-                "position": "Folly Red",
-                "content": "Your favorite color is Folly Red."
-            },
-            "yellow|yellow-pantone|": {
-                "position": "Pantone Yellow",
-                "content": "Your favorite color is Pantone Yellow.",
-                "classes": "yellow-pantone"
             }
         }
     }
