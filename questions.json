@@ -268,6 +268,34 @@
                 "position": "WGT Review",
                 "content": "Required"
             },
+            "No: a partnership project with external stakeholders": {
+                "position": "WGT Review",
+                "content": "Required"
+            },
+            "Yes: a partnership project with EERE funding": {
+                "position": "WGT Review",
+                "content": "Required"
+            },
+            "Yes: site or tool located in the DOE web environment": {
+                "position": "WGT Review",
+                "content": "Required"
+            },
+            "Yes: update to the existing site, such as a few new pages or edits to existing pages": {
+                "position": "WGT Review",
+                "content": "Not Required"
+            },
+            "Yes: a request to change the navigation of an existing site": {
+                "position": "WGT Review",
+                "content": "Not Required"
+            },
+            "No: a request for a new nested group in the Energy.gov CMS, or any other request not mentioned": {
+                "position": "WGT Review",
+                "content": "Not Required"
+            },
+            "Yes: a request for a new nested group in the Energy.gov CMS, or any other request not mentioned": {
+                "position": "WGT Review",
+                "content": "Required"
+            },
             "red|red-folly|": {
                 "position": "Folly Red",
                 "content": "Your favorite color is Folly Red."
