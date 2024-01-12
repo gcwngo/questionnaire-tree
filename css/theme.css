@@ -19,16 +19,16 @@ body {
 .qt-option {
   display: flex;
   margin-bottom: 0.5rem;
-  width: 10rem;
+  width: 11rem;
   font-size: 1.8rem;
   border: 0.1rem solid rgb(86, 165, 235, 0.25);
   background-color: white;
   color: #007934;
 
-	display: block;
+	display: inline-block;
 	height: 30px;
 	line-height: 30px;
-	margin: 5px 0;
+	margin: 20px 5px 5px 5px;
 }
 
 .qt-option:hover {

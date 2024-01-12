@@ -102,7 +102,7 @@ var questionnaireTree = function(qt) {
                 , questionTag = oReferences.QTag
                 , questionTagID = oReferences.QTagPrefix + qid
                 , questionClasses = oReferences.QTagBaseClass + ' ' + oReferences.QTagActiveClass
-                , questionTxt = qid + '. ' + thisQ.question
+                , questionTxt = qid + '. ' + thisQ.question + '<br>'
                 
                 // answer options
                 , newOptTag = oReferences.OptTag
@@ -220,24 +220,42 @@ var questionnaireTree = function(qt) {
             }
         }
 
-        console.log(sAnswersPattern,oAnswers.patterns[sAnswersPattern]);
+        // Binary question options - only matches and extracts content/position of the last question object
+        let regex = /\|([^|]+)\|$/;
+        let match = sAnswersPattern.match(regex);
+        if (match && oAnswers.patterns[match[1]] && oAnswers.patterns[match[1]].content) {
+            sResultContent = oAnswers.patterns[match[1]].content;
+            sResultPosition = oAnswers.patterns[match[1]].position 
+                              ? oAnswers.patterns[match[1]].position 
+                              : 'unknown';
+        }
 
+        /**
+         * Enables check for specific and full pattern history for questions with multiple options
+        console.log(sAnswersPattern,oAnswers.patterns[sAnswersPattern]);
         if (oAnswers.patterns[sAnswersPattern] && oAnswers.patterns[sAnswersPattern].content) {
             sResultContent = oAnswers.patterns[sAnswersPattern].content;
             sResultPosition = oAnswers.patterns[sAnswersPattern].position 
                               ? oAnswers.patterns[sAnswersPattern].position 
                               : 'unknown';
-        } else {
+        } 
+        */
+        else {
             sResultContent = 'You are too unique - we have no data that matches your answers.';
             sResultPosition = 'unknown';
         }
 
         console.log('questionnaireTree finished! Results:');
-        console.log(sAnswersPattern);
+        //For questions with multiple options:
+        //console.log(sAnswersPattern);
+        
+        //For binary questions:
+        console.log(match[1]);
         console.log(sResultPosition,sResultContent);
 
         // if there are custom classes used in answer...
-        sClasses = oAnswers.patterns[sAnswersPattern].classes || '';
+        //sClasses = oAnswers.patterns[sAnswersPattern].classes || '';
+        sClasses = oAnswers.patterns[match[1]].classes || '';
 
         // add answer to DOM
         var questionEl = _appendChild({
