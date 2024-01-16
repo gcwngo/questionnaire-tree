@@ -36,7 +36,7 @@
             }
         },
         "3": {
-            "question": "Is this a redesign or large overhaul of an existing EERE site?",
+            "question": "Is this a redesign or large overhaul of an existing EERE site? <br>Examples of redesigns or large overhauls of an existing site<br> <ul> <li> <a href=\\\"https://www.energy.gov/eere/funding/eere-funding-opportunities\\\">Funding Site Redesign</a> </li>",
             "options": {
                 "yes": {
                     "label": "Yes",
